@@ -64,7 +64,7 @@ if __name__ == "__main__":
         # 利用可能なモデルの例 (OpenRouter のドキュメントで最新のリストを確認してください)
         # model_to_use = "openai/gpt-4o"
         # model_to_use = "anthropic/claude-3-sonnet"
-        model_to_use = "google/gemini-2.5-flash-preview-05-20" # OpenRouterで利用可能なGeminiモデル
+        model_to_use = os.getenv("AI_MODEL") # OpenRouterで利用可能なGeminiモデル
 
         response = chat_with_openrouter(user_input, model_to_use)
         print(f"AI ({model_to_use}): {response}")
